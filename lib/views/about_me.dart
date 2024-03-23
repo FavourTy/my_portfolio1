@@ -43,7 +43,7 @@ class _AboutMeState extends State<AboutMe> {
                   
                   ),
                    Constants.sizedBox(height: 30),
-          Expanded(
+          const Expanded(
               child: Row(
                crossAxisAlignment: CrossAxisAlignment.start,
                mainAxisAlignment: MainAxisAlignment.start,
@@ -62,7 +62,7 @@ class _AboutMeState extends State<AboutMe> {
                                      maxLines: 5,
                                      overflow: TextOverflow.ellipsis,
                                      softWrap: true,
-                                      style: AppTextStyle.aboutMeTextstyle(context),
+                                     // style: AppTextStyle.aboutMeTextstyle(context),
                            ),
                             Text(
                                  'Backed by a robust coding background and an unyielding determination, '
@@ -72,26 +72,14 @@ class _AboutMeState extends State<AboutMe> {
                                  overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.justify,
                                  softWrap: true,
-                                  style: AppTextStyle.aboutMeTextstyle(context),
+                                 // style: AppTextStyle.aboutMeTextstyle(context),
                        ),
-                         Text(
-                       "Hello! I'm Adetayo, a passionate Flutter developer "
-                       "recognized for adding a touch of enchantment to my code. "
-                       "I specialize in crafting outstanding applications and am enthusiastic "
-                       "about collaborating with bright minds in the Flutter development "
-                       "community to enhance my continuous learning journey.",
-                       maxLines: 5,
-                       overflow: TextOverflow.ellipsis,
-                       
-                       softWrap: true,
-                      textAlign: TextAlign.justify,
-                       style: AppTextStyle.aboutMeTextstyle(context),
-                                    ),
+                         
                                    
                        ],
                      ),
                    ),
-                   const Expanded(child: SizedBox())   
+                   Expanded(child: SizedBox())   
                 ],
               ),
             ),

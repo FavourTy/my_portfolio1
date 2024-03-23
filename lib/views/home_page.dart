@@ -31,6 +31,18 @@ class _MiHomePageState extends State<MiHomePage> {
   final List<GlobalKey> navbarKeys = List.generate(4, (index) => GlobalKey());
   final scrollController = ScrollController();
 
+
+   void scrollToSection(int navIndex) {
+    final context = navbarKeys[navIndex].currentContext;
+    if (context != null) {
+      Scrollable.ensureVisible(
+        context,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+        
+      );
+    }
+  }
   @override
   Widget build(BuildContext context) {
     // final screensize = MediaQuery.of(context).size;
@@ -71,7 +83,7 @@ class _MiHomePageState extends State<MiHomePage> {
                Expanded(
                   child:
                   ListView(
-                    scrollDirection: Axis.vertical,
+                   // scrollDirection: Axis.vertical,
                     children:[
                      Column(
                       
@@ -133,16 +145,6 @@ class _MiHomePageState extends State<MiHomePage> {
         );
       }
     );
-  }
-  void scrollToSection (int navIndex){
-
-
-      final Key = navbarKeys[navIndex];
-      Scrollable.ensureVisible(
-        Key.currentContext!,
-        duration: Duration(milliseconds: 500),
-        curve: Curves.easeInOut
-      );
   }
 
  

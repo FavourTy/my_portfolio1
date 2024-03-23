@@ -35,45 +35,52 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
     Project(
       title: 'My Portfolio',
       misubtitle:
-          'A personal portfolio app with cool animations showcasing projects, skills, and contact information.',
-      mitechnologies: "Flutter-web-, Dart, Firebase, Material-UI",
+          'Developed a dynamic and interactive portfolio website showcasing my projects, skills, and professional journey. The website offers visitors a comprehensive view of my accomplishments and areas of expertise, with a user-friendly interface and responsive design',
+      mitechnologies: "Flutter-web, Dart, Material-UI",
       migithublink: "https://github.com/FavourTy/my_portfolio",
     ),
     Project(
       title: 'Ocr App',
       misubtitle:
-          'An app that allows users to extract text from images effortlessly.',
+          'Created an Optical Character Recognition (OCR) application that allows users to extract text from images and documents. The app features an intuitive interface and provides accurate text recognition, making it easy for users to digitize documents on the go.',
       mitechnologies: "Flutter, OCR, Dart, Firebase, Material-UI",
       migithublink: "https://github.com/FavourTy/ocr_app",
     ),
     Project(
       title: 'Meal App',
       misubtitle:
-          'A mobile app for managing meal plans, recipes, and shopping lists',
-      mitechnologies: "Flutter, Dart, Firebase, Material-UI",
+          'Developed a comprehensive meal planning and recipe app that helps users discover new recipes, plan their meals, and track their nutritional intake. The app includes features like shopping lists, meal schedules, and personalized recipe recommendations.',
+      mitechnologies: "Flutter, Dart, Material-UI",
       migithublink: "https://github.com/FavourTy/meals_app",
     ),
     Project(
       title: 'Expense App',
       misubtitle:
-          'An app to track expenses, categorize spending, and generate reports',
+          'Built a personal finance and expense tracking application that allows users to monitor their spending, set budgets, and visualize their financial habits through charts and graphs. The app provides insights to help users manage their finances more effectively.',
       mitechnologies: "Flutter,Dart, Firebase, Material-UI",
       migithublink: "https://github.com/FavourTy/expense_app",
     ),
     Project(
       title: 'Chrome Extension',
       misubtitle:
-          'A browser extension to enhance browsing experience with custom features.',
-      mitechnologies: "Flutter, Dart, Firebase, Material-UI",
+          'I Developed a Chrome extension to enhance browsing efficiency and productivity. The extension offers features like quick links, website blocking, and custom reminders, tailored to improve the user\'s web experience.',
+      mitechnologies: "Flutter, Dart, Material-UI",
       migithublink: "https://github.com/FavourTy/flutter_chrome_extension",
     ),
     //Project(title: 'My Portfolio', misubtitle: 'A personal portfolio app with cool animations showcasing projects, skills, and contact information.',mitechnologies: "Flutter, Dart, Firebase, Material-UI", migithublink: "github"),
     Project(
       title: 'Cgpa Calculator',
       misubtitle:
-          'An app to calculate and manage academic grades and CGPA (Cumulative Grade Point Average).',
-      mitechnologies: "Flutter, Dart, Material-UI",
+          'Created a CGPA (Cumulative Grade Point Average) calculator app designed for students to easily calculate and track their academic performance. The app supports customizable grading scales and provides historical data visualization.',
+      mitechnologies: "Flutter, Dart,firebase Material-UI",
       migithublink: "https://github.com/FavourTy/fuoye_cgpa_calculator",
+    ),
+    Project(
+      title: 'Smart Traffic Monitoring System',
+      misubtitle:
+          ' Developed an innovative smart traffic monitoring system that leverages real-time data analysis to optimize traffic flow and reduce congestion. The system includes features for vehicle detection, traffic pattern analysis, and automated signal control.',
+      mitechnologies: "Flutter, Dart,python,sql-lite,Material-UI",
+      migithublink: "https://github.com/FavourTy/traffic_monitoring_system-",
     ),
     // Add more projects as needed
   ];
@@ -108,11 +115,11 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
           GradientText(
                 'My crafted expressions 🎨',
                 style:  AppTextStyle.pTextStyle(context),
-                gradientType: GradientType.radial,
+                gradientType: GradientType.linear,
                 radius: 2.5,
                 colors: const [
-                 Colors.pink,
-                  Colors.blue,
+                Colors.blue,
+                   Colors.yellow,
                   Colors.purple,
                 ],
               ),
@@ -146,7 +153,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                         children: [
                           Container(
                             width: 1,
-                            height: 150,
+                            height: 160,
                             decoration: const BoxDecoration(
                                 gradient: LinearGradient(
                               colors: [Colors.pink, Colors.blue],
@@ -242,7 +249,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                       children: [
                         Container(
                           width: 1,
-                          height: 210,
+                          height: 250,
                           decoration: const BoxDecoration(
                               gradient: LinearGradient(
                             colors: [Colors.yellow, Colors.blue],
@@ -276,7 +283,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                                                   style: AppTextStyle.headerTextStyle(
                                                       context),
                                                 ),
-                                          
+  
                                           Container(
                                       height: 1,
                                       width: project.title.characters.length.toDouble()*8,
@@ -288,7 +295,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                                           colors:[Colors.blue, Colors.yellow]  )
                                       
                                       ),
-                                                                        )
+                                      )
                                         ],
                                       ),
                                     ),

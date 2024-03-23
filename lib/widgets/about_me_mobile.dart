@@ -26,11 +26,11 @@ class AboutMeMobile extends StatelessWidget {
            GradientText(
                 'Get to know me 😄',
                 style:  AppTextStyle.pTextStyle(context),
-                gradientType: GradientType.radial,
+                gradientType: GradientType.linear,
                 radius: 2.5,
                 colors: const [
-                 Colors.pink,
-                  Colors.blue,
+                 Colors.blue,
+                   Colors.yellow,
                   Colors.purple,
                 ],
               ),
@@ -45,7 +45,7 @@ class AboutMeMobile extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             softWrap: true,
             textAlign: TextAlign.justify,
-            style: AppTextStyle.aboutMeTextstyle(context),
+            style: AppTextStyle.aboutMeMoTextstyle(context),
           ),
           Constants.sizedBox(height: 5),
           Text(
@@ -58,7 +58,7 @@ class AboutMeMobile extends StatelessWidget {
             maxLines: 8,
             overflow: TextOverflow.ellipsis,
             softWrap: true,
-            style: AppTextStyle.aboutMeTextstyle(context),
+            style: AppTextStyle.aboutMeMoTextstyle(context),
           ),
           Constants.sizedBox(height: 5),
           Text(
@@ -69,7 +69,7 @@ class AboutMeMobile extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.justify,
             softWrap: true,
-            style: AppTextStyle.aboutMeTextstyle(context),
+            style: AppTextStyle.aboutMeMoTextstyle(context),
           ),
            Constants.sizedBox(height: 40),
            SizedBox(

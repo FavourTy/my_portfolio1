@@ -28,12 +28,12 @@ class AboutMeDesktop extends StatelessWidget {
                GradientText(
                     'Get to know me 😄',
                     style:  AppTextStyle.pTextStyle(context),
-                    gradientType: GradientType.radial,
+                    gradientType: GradientType.linear,
                     radius: 2.5,
                     colors: const [
-                     Colors.pink,
-                      Colors.blue,
-                      Colors.purple,
+                     Colors.blue,
+                   Colors.yellow,
+                  Colors.purple,
                     ],
                   ),
              ],
@@ -48,7 +48,20 @@ class AboutMeDesktop extends StatelessWidget {
                 Expanded(
                   child: Column(
                     children: [
+                       Text(
+                        "Hello! I'm Adetayo, a passionate Flutter developer "
+                        "recognized for adding a touch of enchantment to my code. "
+                        "I specialize in crafting outstanding applications and am enthusiastic "
+                        "about collaborating with bright minds in the Flutter development "
+                        "community to enhance my continuous learning journey.",
+                        maxLines: 6,
+                        overflow: TextOverflow.ellipsis,
+                        softWrap: true,
+                        textAlign: TextAlign.justify,
+                        style: AppTextStyle.aboutMeDeTextstyle(context),
+                      ),
                       Text(
+                        
                         'In the ever-evolving realm of Flutter development, '
                         'I firmly believe that adaptability is the key to staying at the forefront. '
                         'I am a self-driven individual, constantly seeking to explore '
@@ -58,7 +71,9 @@ class AboutMeDesktop extends StatelessWidget {
                         maxLines: 6,
                         overflow: TextOverflow.ellipsis,
                         softWrap: true,
-                        style: AppTextStyle.aboutMeTextstyle(context),
+                        
+                        style: AppTextStyle.aboutMeDeTextstyle(context),
+                      
                       ),
                        Constants.sizedBox(height: 5),
                       Text(
@@ -69,21 +84,10 @@ class AboutMeDesktop extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.justify,
                         softWrap: true,
-                        style: AppTextStyle.aboutMeTextstyle(context),
+                        style: AppTextStyle.aboutMeDeTextstyle(context),
                       ),
                        Constants.sizedBox(height: 5),
-                      Text(
-                        "Hello! I'm Adetayo, a passionate Flutter developer "
-                        "recognized for adding a touch of enchantment to my code. "
-                        "I specialize in crafting outstanding applications and am enthusiastic "
-                        "about collaborating with bright minds in the Flutter development "
-                        "community to enhance my continuous learning journey.",
-                        maxLines: 6,
-                        overflow: TextOverflow.ellipsis,
-                        softWrap: true,
-                        textAlign: TextAlign.justify,
-                        style: AppTextStyle.aboutMeTextstyle(context),
-                      ),
+                     
                     ],
                   ),
                 ),

@@ -9,8 +9,17 @@ class AppTextStyle{
   
   }
   
-  static TextStyle aboutMeTextstyle (BuildContext context){
+  static TextStyle aboutMeMoTextstyle (BuildContext context){
     return GoogleFonts.rubik(fontSize: 15,
+   // letterSpacing: 1.5,
+    fontWeight: FontWeight.w500,
+    color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+     );
+  
+  }
+   static TextStyle aboutMeDeTextstyle (BuildContext context){
+    return GoogleFonts.rubik(fontSize: 18,
+   // letterSpacing: 1.5,
     fontWeight: FontWeight.w500,
     color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
      );
@@ -86,8 +95,8 @@ return GoogleFonts.rubik(
 
  static TextStyle pTextStyle(BuildContext context){
  return GoogleFonts.lobster(
-    fontSize: 37,
-     fontWeight: FontWeight.w700,
+    fontSize: 30,
+     fontWeight: FontWeight.w200,
     color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
   
   );

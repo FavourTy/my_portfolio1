@@ -27,9 +27,10 @@ class ContactMeDesktop extends StatelessWidget {
                 gradientType: GradientType.radial,
                 radius: 2.5,
                 colors: const [
-                  Colors.pink,
                   Colors.blue,
+                   Colors.yellow,
                   Colors.purple,
+                  
                 ],
               ),
           Constants.sizedBox(height: 50),

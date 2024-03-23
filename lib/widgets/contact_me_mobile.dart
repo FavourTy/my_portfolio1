@@ -21,11 +21,11 @@ class ContactMeMobile extends StatelessWidget {
           GradientText(
                 'shoot me a message 📥',
                 style:  AppTextStyle.pTextStyle(context),
-                gradientType: GradientType.radial,
+                gradientType: GradientType.linear,
                 radius: 2.5,
                 colors: const [
-                  Colors.pink,
                   Colors.blue,
+                   Colors.yellow,
                   Colors.purple,
                 ],
               ),
