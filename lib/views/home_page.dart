@@ -2,6 +2,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:my_portfollio/global/appAssets.dart';
 import 'package:my_portfollio/global/constants.dart';
 import 'package:my_portfollio/global/size.dart';
 import 'package:my_portfollio/widgets/projects_desktop.dart';
@@ -130,8 +131,23 @@ class _MiHomePageState extends State<MiHomePage> {
                       width: double.maxFinite,
                       padding: EdgeInsets.symmetric(horizontal: 20, ),
                       alignment: Alignment.center,
-                      child: Text("Built with love by Adetayo",
-                      style:  AppTextStyle.headerStyle(context)
+                      child: Row(
+                        children: [
+                          Text("Built with",
+                          style:  AppTextStyle.headerStyle(context)
+                          ),
+
+                          Container(
+                            width: 15,
+                            height: 3,
+                            child: Image.asset(AppAsset.loveEmoji,
+                            
+                            ),
+                          ),
+                          Text(" by Adetayo",
+                           style:  AppTextStyle.headerStyle(context)
+                          )
+                        ],
                       ),
                      )
                       ]

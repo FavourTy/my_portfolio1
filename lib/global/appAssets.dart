@@ -6,4 +6,5 @@ class AppAsset {
   static String github = "";
   static String linkedln = "";
   static String image = "assets/images/imag1.jpg";
+  static String loveEmoji = "assets/images/heart.png";
 }

@@ -8,7 +8,6 @@ class AppTextStyle{
      );
   
   }
-  
   static TextStyle aboutMeMoTextstyle (BuildContext context){
     return GoogleFonts.rubik(fontSize: 15,
    // letterSpacing: 1.5,
@@ -25,7 +24,6 @@ class AppTextStyle{
      );
   
   }
-
   static TextStyle getMeTextstyle (BuildContext context){
     return GoogleFonts.lobster(fontSize: 15,
     fontWeight: FontWeight.w500,
@@ -101,7 +99,6 @@ return GoogleFonts.rubik(
   
   );
  }
-
  static TextStyle ProfilelinkStyle(){
   return GoogleFonts.rubik(
     fontSize: 15,
@@ -109,7 +106,6 @@ return GoogleFonts.rubik(
     color: Colors.purple
   );
  }
-
  static TextStyle AaStyle(BuildContext context){
   return GoogleFonts.rubik(
     fontWeight: FontWeight.w500,
