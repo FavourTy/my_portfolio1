@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_portfollio/global/appAssets.dart';
 import 'package:newton_particles/newton_particles.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
@@ -23,17 +24,26 @@ class AboutMeMobile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-           GradientText(
-                'Get to know me 😄',
-                style:  AppTextStyle.pTextStyle(context),
-                gradientType: GradientType.linear,
-                radius: 2.5,
-                colors: const [
-                 Colors.blue,
-                   Colors.yellow,
-                  Colors.purple,
-                ],
-              ),
+           Row(
+             children: [
+               GradientText('About the creator',
+                    style:  AppTextStyle.pTextStyle(context),
+                    gradientType: GradientType.linear,
+                    radius: 2.5,
+                    colors: const [
+                     Colors.blue,
+                       Colors.yellow,
+                      Colors.purple,
+                    ],
+                  ),
+                  Container(
+                    width: 55,
+                            height: 85,
+                            child: Image.asset(AppAsset.grinning),
+                            
+                  )
+             ],
+           ),
           Constants.sizedBox(height: 20),
           Text(
             "Hello! I'm Adetayo, a passionate Flutter developer "

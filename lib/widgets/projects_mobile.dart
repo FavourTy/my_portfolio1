@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_portfollio/global/appAssets.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 import '../global/app_text_style.dart';
@@ -103,24 +104,34 @@ class _ProjectMobileState extends State<ProjectMobile> {
   Widget build(BuildContext context) {
     final screensize = MediaQuery.of(context).size;
     final screenWidth = screensize.width;
+    // final screenHeight = screensize.height;
     return Container(
       width: screenWidth,
-      height: 750,
+      height: 800,
       margin: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          GradientText(
-                'My crafted expressions 🎨',
-                style:  AppTextStyle.pTextStyle(context),
-                gradientType: GradientType.linear,
-                radius: 2.5,
-                colors: const [
-                 Colors.blue,
-                  Colors.yellow,
-                  Colors.purple,
-                ],
-              ),
+          Row(
+            children: [
+              GradientText(
+                    'My dev dishes',
+                    style:  AppTextStyle.pTextStyle(context),
+                    gradientType: GradientType.linear,
+                    radius: 2.5,
+                    colors: const [
+                     Colors.blue,
+                      Colors.yellow,
+                      Colors.purple,
+                    ],
+                  ),
+                  Container(
+                        width: 55,
+                            height: 80,
+                        child: Image.asset(AppAsset.chef),
+                      )
+            ],
+          ),
           Constants.sizedBox(height: 30),
           Container(
             padding: const EdgeInsets.all(16.0),
@@ -171,7 +182,17 @@ class _ProjectMobileState extends State<ProjectMobile> {
                         Constants.sizedBox(height: 20),
                         Row(
                           children: [
-                            const Icon(Icons.cookie),
+                            Container(
+                                    height: 25,
+                                    width: 25,
+                                    child: Image.asset(AppAsset.toolbox),
+                                  ),
+                            Container(
+                              height: 15,
+                              width: 15,
+                              child: Image.asset(AppAsset.hammer),
+                            ),
+
                             Constants.sizedBox(width: 5),
                             Text(
                               selectedProject?.mitechnologies ??

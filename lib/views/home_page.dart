@@ -132,16 +132,16 @@ class _MiHomePageState extends State<MiHomePage> {
                       padding: EdgeInsets.symmetric(horizontal: 20, ),
                       alignment: Alignment.center,
                       child: Row(
+                         crossAxisAlignment: CrossAxisAlignment.center,
+                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("Built with",
                           style:  AppTextStyle.headerStyle(context)
                           ),
-
                           Container(
-                            width: 15,
-                            height: 3,
+                            width: 25,
+                            height: 20,
                             child: Image.asset(AppAsset.loveEmoji,
-                            
                             ),
                           ),
                           Text(" by Adetayo",

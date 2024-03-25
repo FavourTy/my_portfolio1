@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfollio/global/appAssets.dart';
 
 List<String> navTites =[
   "Home",
@@ -6,9 +7,9 @@ List<String> navTites =[
   "Projects",
   "Contact"
 ];
-List<IconData> navIcons =[
-Icons.home,
-Icons.android_outlined,
-Icons.back_hand,
-Icons.mail
+List<String> navIcons =[
+  "assets/images/home.png",
+  "assets/images/about.png",
+  "assets/images/projects.png",
+  "assets/images/callme.png"
 ];

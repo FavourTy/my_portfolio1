@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:my_portfollio/global/app_text_style.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../global/appAssets.dart';
+
 class ProfileLink extends StatefulWidget {
   const ProfileLink({super.key});
 
@@ -18,10 +20,47 @@ class _ProfileLinkState extends State<ProfileLink> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        buildClickableRow("Twitter", 'https://twitter.com/favvyhn'),
-        buildClickableRow("Github", 'https://github.com/favourTy'),
-        buildClickableRow( "Linkedln", 'https://www.linkedin.com/in/adeyemi-favour-adetayo'),
-        buildClickableRow("Mail", 'mailto:@favouradetayo03@gmail.com'),
+        Row(
+
+          children: [
+            Container(
+                        width: 15,
+                            height: 12,
+                        child: Image.asset(AppAsset.twitter),
+                      ),
+            buildClickableRow("X", 'https://twitter.com/favvyhn'),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+                        width: 15,
+                            height: 20,
+                        child: Image.asset(AppAsset.github),
+                      ),
+            buildClickableRow("Github", 'https://github.com/favourTy'),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+                        width: 15,
+                            height: 15,
+                        child: Image.asset(AppAsset.linkedln),
+                      ),
+            buildClickableRow( "Linkedln", 'https://www.linkedin.com/in/adeyemi-favour-adetayo'),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+                        width: 15,
+                            height: 15,
+                        child: Image.asset(AppAsset.mail),
+                      ),
+            buildClickableRow("Mail", 'mailto:@favouradetayo03@gmail.com'),
+          ],
+        ),
       ],
     );
   }

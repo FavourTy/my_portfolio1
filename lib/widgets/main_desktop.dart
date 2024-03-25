@@ -73,10 +73,14 @@ class MiMainDesktop extends StatelessWidget {
                   child: AnimatedTextKit(
                       animatedTexts: [
                         TyperAnimatedText(
-                          "Turning Imaginations Into Interactive Reality",
+                          "Swipe, Tap, Engage: Your Ideas Realized",
                           textStyle: AppTextStyle.blueUnderlinedStyle(context),
                         ),
                         TyperAnimatedText(
+                            "Turning Imaginations into interactive reality",
+                            textStyle:
+                                AppTextStyle.blueUnderlinedStyle(context)),
+                                 TyperAnimatedText(
                             "Bringing your ideas to life through code",
                             textStyle:
                                 AppTextStyle.blueUnderlinedStyle(context)),

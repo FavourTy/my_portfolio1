@@ -1,6 +1,7 @@
 
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:my_portfollio/global/appAssets.dart';
 import '../global/app_text_style.dart';
 import '../global/constants.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -25,17 +26,26 @@ class AboutMeDesktop extends StatelessWidget {
            Constants.sizedBox(height: 10),
            Row(
              children: [
-               GradientText(
-                    'Get to know me 😄',
-                    style:  AppTextStyle.pTextStyle(context),
-                    gradientType: GradientType.linear,
-                    radius: 2.5,
-                    colors: const [
-                     Colors.blue,
-                   Colors.yellow,
-                  Colors.purple,
-                    ],
-                  ),
+               Row(
+                 children: [
+                   GradientText(
+                        'About the creator',
+                        style:  AppTextStyle.pTextStyle(context),
+                        gradientType: GradientType.linear,
+                        radius: 2.5,
+                        colors: const [
+                         Colors.blue,
+                       Colors.yellow,
+                      Colors.purple,
+                        ],
+                      ),
+                      Container(
+                        width: 55,
+                            height: 85,
+                        child: Image.asset(AppAsset.grinning),
+                      )
+                 ],
+               ),
              ],
            ),
          

@@ -30,7 +30,10 @@ class MiDrawer extends StatelessWidget {
           ),
           for (int i = 0; i < navIcons.length; i++)
             ListTile(
-              leading: Icon(navIcons[i]),
+              leading: Container(
+                width: 15,
+                height: 20,
+                child: Image.asset(navIcons[i] )),
               title: InkWell(
                 onTap: () {
                   navOnTapMenu(i);
