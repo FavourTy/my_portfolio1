@@ -66,97 +66,101 @@ class _MiHomePageState extends State<MiHomePage> {
           //  controller: scrollController,
            // child: 
             Column(
-              children: [
-                SizedBox(key: navbarKeys.first),
-                   if(Constraints.maxWidth>= KminDesktopWidth)
-                     HeaderDesktop(navOnMenuTap: (int navIndex){
-                     scrollToSection(navIndex);
-                     } ,)
-                    else
-                    MobileHeader(onMenuTap: () {
-                      scaffoldKey.currentState?.openEndDrawer();
-                    },
-                    onSiteTap: () {
-                    },
-                   ),
-                   const MiDivder(),
-                   // Constants.sizedBox(height: -2
-               Expanded(
-                  child:
-                  ListView(
-                   // scrollDirection: Axis.vertical,
-                    children:[
-                     Column(
-                      
-                      children: [ if(Constraints.maxWidth>= KminDesktopWidth)
-                                     MiMainDesktop()
-                                    else
-                                     MainMobile(),
-                    Constants.sizedBox(height: 120),
-                     const StyledDivider(
-                    color: Colors.grey,
-                      height: 50,
-                      thickness: 1,
-                      lineStyle: DividerLineStyle.dotted,
-                      indent: 20,
-                      endIndent: 20,
-                                    ),
-                     if (Constraints.maxWidth>= KminDesktopWidth)
-                      AboutMeDesktop(key: navbarKeys[1],)
-                     else  AboutMeMobile(key: navbarKeys[1],),
-                     const StyledDivider(
-                    color: Colors.grey,
-                      height: 50,
-                      thickness: 2,
-                      lineStyle: DividerLineStyle.dotted,
-                      indent: 20,
-                      endIndent: 20,
-                                    ),
-                                     if(Constraints.maxWidth>= KminDesktopWidth)
-                    ProjectsDesktop(key: navbarKeys[2],)
-                                    else
-                                     ProjectMobile(key: navbarKeys[2],),
-                                     const StyledDivider(
-                    color: Colors.grey,
-                      height: 50,
-                      thickness: 2,
-                      lineStyle: DividerLineStyle.dotted,
-                      indent: 20,
-                      endIndent: 20,
-                                    ),
-                    if (Constraints.maxWidth>= KminDesktopWidth)
-                     ContactMeDesktop(key: navbarKeys[3],)
-                     else  ContactMeMobile(key: navbarKeys[3],),
-                     Container(
-                      width: double.maxFinite,
-                      padding: EdgeInsets.symmetric(horizontal: 20, ),
-                      alignment: Alignment.center,
-                      child: Row(
-                         crossAxisAlignment: CrossAxisAlignment.center,
-                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("Built with",
-                          style:  AppTextStyle.headerStyle(context)
+                children: [
+                  SizedBox(key: navbarKeys.first),
+                     if(Constraints.maxWidth>= KminDesktopWidth)
+                       HeaderDesktop(navOnMenuTap: (int navIndex){
+                       scrollToSection(navIndex);
+                       } ,)
+                      else
+                      MobileHeader(onMenuTap: () {
+                        scaffoldKey.currentState?.openEndDrawer();
+                      },
+                      onSiteTap: () {
+                      },
+                     ),
+                     const MiDivder(),
+                     // Constants.sizedBox(height: -2
+                 Expanded(
+                    child:
+                    ListView(
+                     // scrollDirection: Axis.vertical,
+                      children:[
+                       Padding(
+                         padding: const EdgeInsets.all(10.0),
+                         child: Column(
+                          
+                          children: [ if(Constraints.maxWidth>= KminDesktopWidth)
+                                         const MiMainDesktop()
+                                        else
+                                         const MainMobile(),
+                                               Constants.sizedBox(height: 120),
+                         const StyledDivider(
+                                               color: Colors.grey,
+                          height: 50,
+                          thickness: 1,
+                          lineStyle: DividerLineStyle.dotted,
+                          indent: 20,
+                          endIndent: 20,
+                                        ),
+                         if (Constraints.maxWidth>= KminDesktopWidth)
+                          AboutMeDesktop(key: navbarKeys[1],)
+                         else  AboutMeMobile(key: navbarKeys[1],),
+                         const StyledDivider(
+                                               color: Colors.grey,
+                          height: 50,
+                          thickness: 2,
+                          lineStyle: DividerLineStyle.dotted,
+                          indent: 20,
+                          endIndent: 20,
+                                        ),
+                                         if(Constraints.maxWidth>= KminDesktopWidth)
+                                               ProjectsDesktop(key: navbarKeys[2],)
+                                        else
+                                         ProjectMobile(key: navbarKeys[2],),
+                                         const StyledDivider(
+                                               color: Colors.grey,
+                          height: 50,
+                          thickness: 2,
+                          lineStyle: DividerLineStyle.dotted,
+                          indent: 20,
+                          endIndent: 20,
+                                        ),
+                                               if (Constraints.maxWidth>= KminDesktopWidth)
+                         ContactMeDesktop(key: navbarKeys[3],)
+                         else  ContactMeMobile(key: navbarKeys[3],),
+                         Container(
+                          width: double.maxFinite,
+                          padding: const EdgeInsets.symmetric(horizontal: 20, ),
+                          alignment: Alignment.center,
+                          child: Row(
+                             crossAxisAlignment: CrossAxisAlignment.center,
+                             mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text("Built with ",
+                              style:  AppTextStyle.headerStyle(context)
+                              ),
+                              SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: Image.asset(AppAsset.loveEmoji,
+                                ),
+                              ),
+                              Text(" by Adetayo",
+                               style:  AppTextStyle.headerStyle(context)
+                              )
+                            ],
                           ),
-                          Container(
-                            width: 25,
-                            height: 20,
-                            child: Image.asset(AppAsset.loveEmoji,
-                            ),
-                          ),
-                          Text(" by Adetayo",
-                           style:  AppTextStyle.headerStyle(context)
-                          )
-                        ],
-                      ),
-                     )
-                      ]
+                         )
+                          ]
+                                               ),
+                       ),
+                      ] 
                     ),
-                    ] 
-                  ),
-               ),
-              ],
-            ),
+                 ),
+                ],
+              ),
+            
          // ),
         );
       }

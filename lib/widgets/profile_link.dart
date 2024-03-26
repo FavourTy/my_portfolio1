@@ -20,20 +20,10 @@ class _ProfileLinkState extends State<ProfileLink> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Row(
-
-          children: [
-            Container(
-                        width: 15,
-                            height: 12,
-                        child: Image.asset(AppAsset.twitter),
-                      ),
-            buildClickableRow("X", 'https://twitter.com/favvyhn'),
-          ],
-        ),
+       
         Row(
           children: [
-            Container(
+            SizedBox(
                         width: 15,
                             height: 20,
                         child: Image.asset(AppAsset.github),
@@ -43,7 +33,7 @@ class _ProfileLinkState extends State<ProfileLink> {
         ),
         Row(
           children: [
-            Container(
+            SizedBox(
                         width: 15,
                             height: 15,
                         child: Image.asset(AppAsset.linkedln),
@@ -51,9 +41,20 @@ class _ProfileLinkState extends State<ProfileLink> {
             buildClickableRow( "Linkedln", 'https://www.linkedin.com/in/adeyemi-favour-adetayo'),
           ],
         ),
+         Row(
+
+          children: [
+            SizedBox(
+                        width: 15,
+                            height: 12,
+                        child: Image.asset(AppAsset.twitter),
+                      ),
+            buildClickableRow("X", 'https://twitter.com/favvyhn'),
+          ],
+        ),
         Row(
           children: [
-            Container(
+            SizedBox(
                         width: 15,
                             height: 15,
                         child: Image.asset(AppAsset.mail),
@@ -81,7 +82,7 @@ class _ProfileLinkState extends State<ProfileLink> {
         children: [
           Text(text,
               style: url == selectedLink
-                  ? AppTextStyle.ProfilelinkStyle()
+                  ? AppTextStyle.profileLinkStyle(context)
                   : AppTextStyle.headerStyle(context)
               // style: AppTextStyle.headerStyle(context)
               // color: url == selectedLink ? Colors.purple : Colors.white,

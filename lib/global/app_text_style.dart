@@ -90,7 +90,6 @@ return GoogleFonts.rubik(
   color: Colors.white,
 );
  } 
-
  static TextStyle pTextStyle(BuildContext context){
  return GoogleFonts.lobster(
     fontSize: 30,
@@ -99,14 +98,14 @@ return GoogleFonts.rubik(
   
   );
  }
- static TextStyle ProfilelinkStyle(){
+ static TextStyle profileLinkStyle(BuildContext context){
   return GoogleFonts.rubik(
     fontSize: 15,
     fontWeight: FontWeight.w500,
-    color: Colors.purple
+    color: Theme.of(context).brightness == Brightness.light ? Colors.purple : Colors.pink,
   );
  }
- static TextStyle AaStyle(BuildContext context){
+ static TextStyle aaStyle(BuildContext context){
   return GoogleFonts.rubik(
     fontWeight: FontWeight.w500,
     fontSize: 40,

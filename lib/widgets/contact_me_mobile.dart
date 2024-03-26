@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfollio/widgets/profile_link.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
-
 import '../global/appAssets.dart';
 import '../global/app_text_style.dart';
 import '../global/constants.dart';
-
 class ContactMeMobile extends StatelessWidget {
   const ContactMeMobile({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,7 +28,7 @@ class ContactMeMobile extends StatelessWidget {
                       Colors.purple,
                     ],
                   ),
-                   Container(
+                   SizedBox(
                         width: 55,
                             height: 60,
                         child: Image.asset(AppAsset.inbox),

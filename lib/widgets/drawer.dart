@@ -30,7 +30,7 @@ class MiDrawer extends StatelessWidget {
           ),
           for (int i = 0; i < navIcons.length; i++)
             ListTile(
-              leading: Container(
+              leading: SizedBox(
                 width: 15,
                 height: 20,
                 child: Image.asset(navIcons[i] )),

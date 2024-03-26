@@ -12,7 +12,7 @@ class AppAsset {
 static String star = "assets/images/star.png";
  static String wink = "assets/images/wink.png";
  static String hammer = "assets/images/hammer.png";
-  static String about = "assets/images/about.png";
+  static String about = "assets/images/wink.png";
    static String chef = "assets/images/chef.png";
     static String home = "assets/images/home.png";
      static String inbox = "assets/images/inbox.png";

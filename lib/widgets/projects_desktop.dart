@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_web_libraries_in_flutter
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfollio/global/appAssets.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import '../global/app_text_style.dart';
@@ -126,7 +125,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                       Colors.purple,
                     ],
                   ),
-                  Container(
+                  SizedBox(
                         width: 55,
                             height: 85,
                         child: Image.asset(AppAsset.chef),
@@ -182,7 +181,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.5,
                                 child: Text(
                                   selectedProject?.misubtitle ??
@@ -198,17 +197,20 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                               Constants.sizedBox(height: 20),
                               Row(
                                 children: [
-                                   Container(
+                                   SizedBox(
                                     height: 25,
                                     width: 25,
                                     child: Image.asset(AppAsset.toolbox),
                                   ),
-                                  Container(
+                                  SizedBox(
                                     height: 15,
                                     width: 15,
                                     child: Image.asset(AppAsset.hammer),
                                   ),
                                   Constants.sizedBox(width: 5),
+                                  Text(": ",
+                                  style:  AppTextStyle.headerTextStyle(context) ,
+                                  ),
                                   Text(
                                     selectedProject?.mitechnologies ??
                                         'Select a project to see details',
@@ -271,7 +273,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                           height: 250,
                           decoration: const BoxDecoration(
                               gradient: LinearGradient(
-                            colors: [Colors.yellow, Colors.blue],
+                            colors: [Colors.blue, Colors.yellow],
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                           )),

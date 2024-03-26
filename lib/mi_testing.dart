@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:adaptive_screen_utils/adaptive_screen_utils.dart';
 import 'package:flutter/material.dart';
@@ -69,11 +68,11 @@ class _MiTestingState extends State<MiTesting> {
                      Column(
                       
                       children: [ if(desktop)
-                                     MiMainDesktop()
+                                     const MiMainDesktop()
                                     else if (tablet)
-                                    MiMainDesktop()
+                                    const MiMainDesktop()
                                     else
-                                     MainMobile(),
+                                     const MainMobile(),
                     Constants.sizedBox(height: 120),
                      const StyledDivider(
                     color: Colors.grey,
@@ -84,9 +83,9 @@ class _MiTestingState extends State<MiTesting> {
                       endIndent: 20,
                                     ),
                      if (desktop)
-                      AboutMeDesktop() 
-                     else if (tablet)   AboutMeDesktop() 
-                    else AboutMeMobile(),
+                      const AboutMeDesktop() 
+                     else if (tablet)   const AboutMeDesktop() 
+                    else const AboutMeMobile(),
                      const StyledDivider(
                     color: Colors.grey,
                       height: 50,
@@ -96,9 +95,9 @@ class _MiTestingState extends State<MiTesting> {
                       endIndent: 20,
                                     ),
                                      if(desktop)
-                    ProjectsDesktop()
-                                    else if (tablet) ProjectsDesktop()
-                                      else ProjectMobile(),
+                    const ProjectsDesktop()
+                                    else if (tablet) const ProjectsDesktop()
+                                      else const ProjectMobile(),
                                      const StyledDivider(
                     color: Colors.grey,
                       height: 50,
@@ -108,13 +107,13 @@ class _MiTestingState extends State<MiTesting> {
                       endIndent: 20,
                                     ),
                     if (desktop)
-                     ContactMeDesktop()
-                     else if (tablet)  ContactMeDesktop()
+                     const ContactMeDesktop()
+                     else if (tablet)  const ContactMeDesktop()
                      else
-                     ContactMeMobile(),
+                     const ContactMeMobile(),
                      Container(
                       width: double.maxFinite,
-                      padding: EdgeInsets.symmetric(horizontal: 20, ),
+                      padding: const EdgeInsets.symmetric(horizontal: 20, ),
                       alignment: Alignment.center,
                       child: Text("Built with love by Adetayo",
                       style:  AppTextStyle.headerStyle(context)

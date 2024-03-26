@@ -1,7 +1,8 @@
+// ignore_for_file: unnecessary_string_escapes
+
 import 'package:animate_do/animate_do.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-
 import '../global/app_text_style.dart';
 import '../global/constants.dart';
 import 'profile_animation.dart';
@@ -29,14 +30,14 @@ class MiMainDesktop extends StatelessWidget {
               // mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 FadeInLeft(
-                    duration: const Duration(milliseconds: 1400),
+                    duration: const Duration(milliseconds: 1500),
                     child: Text("Hola,",
                         style: AppTextStyle.bodyTextStyle(context))),
                 Constants.sizedBox(height: 15),
                 Row(
                   children: [
                     FadeInLeft(
-                      duration: const Duration(milliseconds: 1400),
+                      duration: const Duration(milliseconds: 1500),
                       child: Text(
                         "I\'m",
                         style: AppTextStyle.bodyTextStyle(context),
@@ -44,7 +45,7 @@ class MiMainDesktop extends StatelessWidget {
                     ),
                     Constants.sizedBox(width: 10),
                     FadeInDown(
-                      duration: const Duration(milliseconds: 1400),
+                      duration: const Duration(milliseconds: 1500),
                       child: AnimatedTextKit(animatedTexts: [
                         ColorizeAnimatedText(
                           "Adetayo,",
@@ -61,7 +62,7 @@ class MiMainDesktop extends StatelessWidget {
                 ),
                 Constants.sizedBox(height: 15),
                 FadeInLeft(
-                  duration: const Duration(milliseconds: 1400),
+                  duration: const Duration(milliseconds: 1500),
                   child: Text(
                     "a flutter developer.",
                     style: AppTextStyle.bodyTextStyle(context),

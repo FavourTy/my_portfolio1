@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
-
 import '../global/appAssets.dart';
 import '../global/app_text_style.dart';
 import '../global/constants.dart';
@@ -24,7 +22,6 @@ class ContactMeDesktop extends StatelessWidget {
         children: [
           Row(
             children: [
-              
                   GradientText(
                         'shoot me a message ',
                         style:  AppTextStyle.pTextStyle(context),
@@ -36,9 +33,9 @@ class ContactMeDesktop extends StatelessWidget {
                           Colors.purple,
                         ],
                       ),
-                       Container(
+                       SizedBox(
                         width: 55,
-                            height: 70,
+                            height: 65,
                         child: Image.asset(AppAsset.inbox),
                       )
                 

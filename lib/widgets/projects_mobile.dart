@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_web_libraries_in_flutter
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfollio/global/appAssets.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
@@ -125,7 +124,7 @@ class _ProjectMobileState extends State<ProjectMobile> {
                       Colors.purple,
                     ],
                   ),
-                  Container(
+                  SizedBox(
                         width: 55,
                             height: 80,
                         child: Image.asset(AppAsset.chef),
@@ -167,7 +166,7 @@ class _ProjectMobileState extends State<ProjectMobile> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
+                        SizedBox(
                            width: MediaQuery.of(context).size.width * 0.8,
                           child: Text(
                             selectedProject?.misubtitle ??
@@ -182,12 +181,12 @@ class _ProjectMobileState extends State<ProjectMobile> {
                         Constants.sizedBox(height: 20),
                         Row(
                           children: [
-                            Container(
+                            SizedBox(
                                     height: 25,
                                     width: 25,
                                     child: Image.asset(AppAsset.toolbox),
                                   ),
-                            Container(
+                            SizedBox(
                               height: 15,
                               width: 15,
                               child: Image.asset(AppAsset.hammer),

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:animated_path/animated_path.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfollio/views/pathfile.dart';

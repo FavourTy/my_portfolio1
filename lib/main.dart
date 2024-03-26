@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfollio/mi_testing.dart';
-import 'package:my_portfollio/views/animatd_adetayo.dart';
-import 'package:my_portfollio/views/animated_path.dart';
 import 'package:my_portfollio/views/home_page.dart';
 import 'package:provider/provider.dart';
 import 'package:my_portfollio/global/theme_provider.dart';
@@ -23,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'My Portfolio',
       theme: Provider.of<ThemeProvider>(context).themedata,
       themeMode: ThemeMode.system,
-      home: MiHomePage(),//MiTesting(),
+      home: const MiHomePage(),//MiTesting(),
       debugShowCheckedModeBanner: false,
     );
   }

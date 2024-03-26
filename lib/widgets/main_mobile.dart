@@ -1,3 +1,4 @@
+// ignore_for_file: unnecessary_string_escapes
 import 'package:animate_do/animate_do.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';

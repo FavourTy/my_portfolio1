@@ -1,4 +1,6 @@
 
+// ignore_for_file: avoid_print
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfollio/global/appAssets.dart';
@@ -39,7 +41,7 @@ class AboutMeDesktop extends StatelessWidget {
                       Colors.purple,
                         ],
                       ),
-                      Container(
+                      SizedBox(
                         width: 55,
                             height: 85,
                         child: Image.asset(AppAsset.grinning),
@@ -107,6 +109,7 @@ class AboutMeDesktop extends StatelessWidget {
                       
                       child: Stack(
                         children:[
+                          if(Theme.of(context).brightness == Brightness.light)
                           Newton(
                             // Add any kind of effects to your UI
                             // For example:
@@ -120,38 +123,73 @@ class AboutMeDesktop extends StatelessWidget {
                                     effectConfiguration: const EffectConfiguration(),
                                 )
                             ],
+                        )
+                        else 
+                        Newton(
+                            // Add any kind of effects to your UI
+                            // For example:
+                            activeEffects: [
+                                RainEffect(
+                                    particleConfiguration: ParticleConfiguration(
+                                        shape: CircleShape(),
+                                        size: const Size(5, 5),
+                                        color: const SingleParticleColor(color: Colors.pink),
+                                    ),
+                                    effectConfiguration: const EffectConfiguration(),
+                                )
+                            ],
                         ),
-                        Center(
-                          child: AnimatedTextKit(
-                                 animatedTexts: [
-                                   RotateAnimatedText('Flutter',
-                                   textStyle: AppTextStyle.AaStyle(context),
-                                   ),
-                                   RotateAnimatedText('Dart',
-                                   textStyle: AppTextStyle.AaStyle(context),
-                                   ),
-                                   RotateAnimatedText('Material-UI',
-                                   textStyle: AppTextStyle.AaStyle(context),
-                                   ),
-                                   RotateAnimatedText('Git',
-                                   textStyle: AppTextStyle.AaStyle(context),
-                                   ),
-                                   RotateAnimatedText('GitHub',
-                                   textStyle: AppTextStyle.AaStyle(context),
-                                   ),
-                                   RotateAnimatedText('Firebase',
-                                   textStyle: AppTextStyle.AaStyle(context),
-                                   ),
-                                   RotateAnimatedText('C++',
-                                   textStyle: AppTextStyle.AaStyle(context),
-                                   ),
-                                 ],
-                                 onTap: () {
-                                   print("Tap Event");
-                                 },
-                                 repeatForever: true,
-                               ),
-                        ),
+
+                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                           children: [
+                             Center(
+                               child: AnimatedTextKit(
+                                       animatedTexts: [
+                                         RotateAnimatedText('Flutter',
+                                         textStyle: AppTextStyle.aaStyle(context),
+                                         ),
+                                         RotateAnimatedText('GitHub',
+                                         textStyle: AppTextStyle.aaStyle(context),
+                                         ),
+                                         RotateAnimatedText('Dart',
+                                       textStyle: AppTextStyle.aaStyle(context),
+                                       ),
+                                       RotateAnimatedText('Firebase',
+                                         textStyle: AppTextStyle.aaStyle(context),
+                                         ),
+                                         
+                                       ],
+                                       onTap: () {
+                                         print("Tap Event");
+                                       },
+                                       repeatForever: true,
+                                     ),
+                             ),
+                                   Center(
+                                     child: AnimatedTextKit(animatedTexts: [
+                                      RotateAnimatedText('Material-UI',
+                                         textStyle: AppTextStyle.aaStyle(context),
+                                         ),
+                                          RotateAnimatedText('Git',
+                                         textStyle: AppTextStyle.aaStyle(context),
+                                         ),
+                                         RotateAnimatedText('C++',
+                                           textStyle: AppTextStyle.aaStyle(context),
+                                           ),
+                                            RotateAnimatedText('Google',
+                                         textStyle: AppTextStyle.aaStyle(context),
+                                         ),
+                                     ],
+                                     
+                                      onTap: () {
+                                           print("Tap Event");
+                                         },
+                                         repeatForever: true,),
+                                   )
+                           ],
+                         ),
+                        
                         ] 
                       ),
                     ),
