@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfollio/global/appAssets.dart';
 import 'package:my_portfollio/global/app_text_style.dart';
-import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 import 'package:my_portfollio/views/home_page.dart';
-
-
+import 'package:tbib_splash_screen/splash_screen.dart';
+import 'package:tbib_splash_screen/splash_screen_view.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,23 +15,18 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return FlutterSplashScreen.scale(
-          gradient: const LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.black,
-              Colors.black12,
-            ],
-          ),
-          childWidget: Text(
-            "ADETAYO", style: AppTextStyle.splashStyle(),
-          ),
-          duration: const Duration(milliseconds: 1500),
-          animationDuration: const Duration(milliseconds: 1000),
-          onAnimationEnd: () => debugPrint("On Scale End"),
-          nextScreen: const MiHomePage()
-        ); 
+    return Scaffold(
+      body: 
+          SplashScreenView(
+                  // navigateWhere: isLoaded,
+                   navigateRoute: const MiHomePage(),
+                   text: WavyAnimatedText(
+                     "ADETAYO",
+                     textStyle: AppTextStyle.spStyle(context),
+                   ),
+                   imageSrc: AppAsset.grinning
+                 ),
+    );
     
   }
 }

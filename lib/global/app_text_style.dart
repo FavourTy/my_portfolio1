@@ -112,6 +112,12 @@ return GoogleFonts.rubik(
      color: Theme.of(context).brightness == Brightness.light ? Colors.purple : Colors.pink,
   );
  }
- 
+ static TextStyle spStyle(BuildContext context){
+  return GoogleFonts.rubik(
+    fontWeight: FontWeight.bold,
+    fontSize: 60,
+    color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+  );
+ }
 }
 
