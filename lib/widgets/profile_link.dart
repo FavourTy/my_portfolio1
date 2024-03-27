@@ -38,7 +38,7 @@ class _ProfileLinkState extends State<ProfileLink> {
                             height: 15,
                         child: Image.asset(AppAsset.linkedln),
                       ),
-            buildClickableRow( "Linkedln", 'https://www.linkedin.com/in/adeyemi-favour-adetayo'),
+            buildClickableRow( "Linkedln", "https://www.linkedin.com/in/adeyemi-favour-adetayo-72800222a/"),
           ],
         ),
          Row(

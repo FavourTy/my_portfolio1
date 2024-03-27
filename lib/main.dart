@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My Portfolio',
       theme: Provider.of<ThemeProvider>(context).themedata,
+      
       themeMode: ThemeMode.system,
       home: const SplashScreen(),//MiTesting(),
       debugShowCheckedModeBanner: false,

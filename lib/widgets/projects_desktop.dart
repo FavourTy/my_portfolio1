@@ -37,7 +37,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
       misubtitle:
           'Developed a dynamic and interactive portfolio website showcasing my projects, skills, and professional journey. The website offers visitors a comprehensive view of my accomplishments and areas of expertise, with a user-friendly interface and responsive design',
       mitechnologies: "Flutter-web, Dart, Material-UI",
-      migithublink: "https://github.com/FavourTy/my_portfolio",
+      migithublink: "https://github.com/FavourTy/my_portfolio1",
     ),
     Project(
       title: 'Ocr App',
