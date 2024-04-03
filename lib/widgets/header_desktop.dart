@@ -4,6 +4,7 @@ import 'package:my_portfollio/global/app_text_style.dart';
 import 'package:my_portfollio/global/constants.dart';
 import 'package:my_portfollio/global/nav_items.dart';
 import 'package:my_portfollio/widgets/appMode.dart';
+import 'package:my_portfollio/widgets/main_desktop.dart';
 import 'package:my_portfollio/widgets/site_logo.dart';
 
 class HeaderDesktop extends StatelessWidget {
@@ -21,17 +22,18 @@ class HeaderDesktop extends StatelessWidget {
             onTap: () {},
           ),
           const Spacer(),
-          for (int i = 0; i < navTites.length; i++)
+          
+         for (int i = 0; i < navTites.length; i++)
             TextButton(
               onPressed: () {
-                navOnMenuTap(i);
-              },
+               navOnMenuTap(i);
+             },
               child: AnimatedTextKit(animatedTexts: [
-                ColorizeAnimatedText(navTites[i],
+              ColorizeAnimatedText(navTites[i],
                     textStyle: AppTextStyle.headerTextStyle(context),
-                    colors: [Colors.pink, Colors.blue, Colors.purple]),
+                   colors: [Colors.pink, Colors.blue, Colors.purple]),
               ], repeatForever: true),
-            ),
+           ),
           Constants.sizedBox(width: 30),
           const AppMode()
         ],
