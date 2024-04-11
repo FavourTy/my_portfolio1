@@ -167,14 +167,14 @@ class _ProjectMobileState extends State<ProjectMobile> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                           width: MediaQuery.of(context).size.width * 0.8,
+                           width: MediaQuery.of(context).size.width * 0.79,
                           child: Text(
                             selectedProject?.misubtitle ??
                                 'Select a project to see details',
                            // maxLines: 3,
                            // overflow: TextOverflow.ellipsis,
                            // softWrap: true,
-                           // textAlign: TextAlign.start,
+                            textAlign: TextAlign.justify,
                             style: AppTextStyle.headerTextStyle(context),
                           ),
                         ),
