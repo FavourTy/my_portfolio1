@@ -25,8 +25,8 @@ class HeaderDesktop extends StatelessWidget {
           
          for (int i = 0; i < navTites.length; i++)
             TextButton(
-              onPressed: () {
-               navOnMenuTap(i);
+             onPressed: () {
+              navOnMenuTap(i);
              },
               child: AnimatedTextKit(animatedTexts: [
               ColorizeAnimatedText(navTites[i],

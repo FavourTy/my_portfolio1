@@ -7,7 +7,7 @@ import '../global/constants.dart';
 import 'profile_animation_mobile.dart';
 
 class MainMobile extends StatelessWidget {
-  const MainMobile({super.key});
+  const MainMobile({super.key, });
 
   @override
   Widget build(BuildContext context) {

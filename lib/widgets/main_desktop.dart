@@ -10,7 +10,7 @@ import 'profile_animation.dart';
 
 class MiMainDesktop extends StatelessWidget {
   const MiMainDesktop({
-    super.key,
+    super.key, 
   });
 
   @override
