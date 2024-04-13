@@ -24,9 +24,8 @@ class _SplashScreenState extends State<SplashScreen> {
                      "ADETAYO",
                      textStyle: AppTextStyle.spStyle(context),
                    ),
-                   imageSrc: AppAsset.grinning
+                   imageSrc: AppAsset.myDash
                  ),
     );
-    
   }
 }

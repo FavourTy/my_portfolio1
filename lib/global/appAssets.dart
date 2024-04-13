@@ -19,4 +19,5 @@ static String star = "assets/images/star.png";
       static String projects = "assets/images/projects.png";
        static String toolbox = "assets/images/toolbox.png";
  static String callme = "assets/images/callme.png";
+ static String myDash = "assets/images/favDash.png";
 }
