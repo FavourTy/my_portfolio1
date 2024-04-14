@@ -1,4 +1,3 @@
-
 List<String> navTites =[
   "Home",
   "About",

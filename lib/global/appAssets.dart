@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 class AppAsset {
   static String mail = "assets/images/mail.png";
   static String twitter = "assets/images/twitter.png";

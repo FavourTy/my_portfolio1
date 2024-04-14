@@ -48,6 +48,8 @@ dependencies:
   newton_particles: ^0.1.7
   adaptive_screen_utils: ^1.3.0
   tbib_splash_screen: ^1.0.0
+  get: ^4.6.6
+  hive_flutter: ^1.1.0
 
 
 dev_dependencies:
