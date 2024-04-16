@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_portfollio/global/constants.dart';
 import 'package:my_portfollio/widgets/appMode.dart';
+import '../global/controller/controller.dart';
 import 'site_logo.dart';
 
 class MobileHeader extends StatelessWidget {
@@ -9,6 +11,7 @@ class MobileHeader extends StatelessWidget {
   final VoidCallback? onMenuTap;
   @override
   Widget build(BuildContext context) {
+       Get.lazyPut(() => HomeController());
     return Container(
       height: 40.0,
       margin: const EdgeInsets.fromLTRB(40, 5, 20, 5),

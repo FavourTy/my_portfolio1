@@ -2,9 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:provider/provider.dart';
-import 'package:my_portfollio/global/theme_provider.dart';
-
 import '../global/controller/controller.dart';
 
 class AppMode extends  GetView<HomeController> {
@@ -16,7 +13,19 @@ class AppMode extends  GetView<HomeController> {
       onTap: () {
         controller.toggleTheme();
       },
-      child: const Icon(Icons.light_mode),
+      child: Material(
+        color: Colors.transparent,
+        child: Obx(() => Icon(
+          controller.isDarkMode.value ? Icons.dark_mode : Icons.light_mode,
+        )),
+      ),
+
+      // child:  Icon(
+      //   controller.isDarkMode.value
+      //               ? Icons.dark_mode
+      //               : Icons.light_mode,
+      //   // Icons.light_mode
+      //   ),
     );
   }
 }

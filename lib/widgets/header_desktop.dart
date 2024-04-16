@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_portfollio/global/app_text_style.dart';
 import 'package:my_portfollio/global/constants.dart';
 import 'package:my_portfollio/global/nav_items.dart';
@@ -7,11 +8,14 @@ import 'package:my_portfollio/widgets/appMode.dart';
 import 'package:my_portfollio/widgets/main_desktop.dart';
 import 'package:my_portfollio/widgets/site_logo.dart';
 
+import '../global/controller/controller.dart';
+
 class HeaderDesktop extends StatelessWidget {
   const HeaderDesktop({super.key, required this.navOnMenuTap});
   final Function(int) navOnMenuTap;
   @override
   Widget build(BuildContext context) {
+       Get.lazyPut(() => HomeController());
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
       height: 40.0,
