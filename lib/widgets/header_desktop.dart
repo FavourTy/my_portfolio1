@@ -5,7 +5,6 @@ import 'package:my_portfollio/global/app_text_style.dart';
 import 'package:my_portfollio/global/constants.dart';
 import 'package:my_portfollio/global/nav_items.dart';
 import 'package:my_portfollio/widgets/appMode.dart';
-import 'package:my_portfollio/widgets/main_desktop.dart';
 import 'package:my_portfollio/widgets/site_logo.dart';
 
 import '../global/controller/controller.dart';
