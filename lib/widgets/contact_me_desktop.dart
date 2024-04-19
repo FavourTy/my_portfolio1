@@ -38,7 +38,6 @@ class ContactMeDesktop extends StatelessWidget {
                             height: 65,
                         child: Image.asset(AppAsset.inbox),
                       )
-                
                    
             ],
           ),

@@ -6,7 +6,6 @@ import 'package:my_portfollio/views/pathfile.dart';
 
 class AnimatedAdetayo extends StatefulWidget {
   const AnimatedAdetayo({super.key});
-
   @override
   State<AnimatedAdetayo> createState() => _AnimatedAdetayoState();
 }

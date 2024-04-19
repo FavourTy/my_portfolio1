@@ -96,9 +96,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
       selectedProject = projects.first;
     }
   }
-
   String selectedLink = '';
-
   @override
   Widget build(BuildContext context) {
     final screensize = MediaQuery.of(context).size;
@@ -138,12 +136,6 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Row for the list of projects
-              //SingleChildScrollView(
-              // scrollDirection: Axis.vertical,
-              //child:
-              //),
-              // Row/Container for the details of the selected project
               Expanded(
                 child: Container(
                   padding: const EdgeInsets.all(16.0),
@@ -245,7 +237,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                                           colors:[Colors.blue, Colors.yellow]  )
                                       
                                       ),
-                                                                        )
+                                     )
                                     ],
                                   ))
                             ],

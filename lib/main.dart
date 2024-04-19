@@ -12,8 +12,6 @@ void main() async {
   await Hive.openBox('settings'); // Open the box that will store the settings
   runApp( MyApp());
 }
-
-
 class MyApp extends StatelessWidget {
    MyApp({super.key});
  final ThemeController _themeController = Get.put(ThemeController());

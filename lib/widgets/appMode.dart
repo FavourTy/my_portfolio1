@@ -20,12 +20,6 @@ class AppMode extends  GetView<HomeController> {
         )),
       ),
 
-      // child:  Icon(
-      //   controller.isDarkMode.value
-      //               ? Icons.dark_mode
-      //               : Icons.light_mode,
-      //   // Icons.light_mode
-      //   ),
     );
   }
 }
