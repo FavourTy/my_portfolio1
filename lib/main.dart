@@ -10,26 +10,27 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter(); // Initialize Hive
   await Hive.openBox('settings'); // Open the box that will store the settings
-  runApp( MyApp());
+  runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
-   MyApp({super.key});
- final ThemeController _themeController = Get.put(ThemeController());
+  MyApp({super.key});
+  final ThemeController _themeController = Get.put(ThemeController());
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'My Portfolio',
-       initialBinding:
-          InitialBinding(),
-        //  themeMode: ThemeMode.system, // Initial Binding to make Sure the ThemeController is initialized
-     themeMode: _themeController.themeStateFromHiveSettingBox, // Setting the ThemeMode from the Hive Setting Box
+      initialBinding: InitialBinding(),
+      //  themeMode: ThemeMode.system, // Initial Binding to make Sure the ThemeController is initialized
+      themeMode: _themeController
+          .themeStateFromHiveSettingBox, // Setting the ThemeMode from the Hive Setting Box
       theme: CustomTheme.lightTheme, // CustomThemeData for Light Theme
       darkTheme: CustomTheme.darkTheme,
       // theme: Provider.of<ThemeProvider>(context).themedata,
-      
+
       // themeMode: ThemeMode.system,
-      home: const SplashScreen(),//MiTesting(),
+      home: const SplashScreen(), //MiTesting(),
       debugShowCheckedModeBanner: false,
     );
   }

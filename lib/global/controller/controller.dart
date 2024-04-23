@@ -32,7 +32,6 @@ class HomeController extends GetxController
       isDarkMode: isDarkMode,
       modeName: currentModeName,
     );
-   
   }
 
   @override
