@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:my_portfollio/views/splash_screen.dart';
@@ -19,19 +20,24 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'My Portfolio',
-      initialBinding: InitialBinding(),
-      //  themeMode: ThemeMode.system, // Initial Binding to make Sure the ThemeController is initialized
-      themeMode: _themeController
-          .themeStateFromHiveSettingBox, // Setting the ThemeMode from the Hive Setting Box
-      theme: CustomTheme.lightTheme, // CustomThemeData for Light Theme
-      darkTheme: CustomTheme.darkTheme,
-      // theme: Provider.of<ThemeProvider>(context).themedata,
-
-      // themeMode: ThemeMode.system,
-      home: const SplashScreen(), //MiTesting(),
-      debugShowCheckedModeBanner: false,
+    return ScreenUtilInit(
+      designSize: const Size(1080, 1920),
+      // minTextAdapt: true,
+      splitScreenMode: true,
+      // Use builder only if you need to use library outside ScreenUtilInit context
+      builder: (_, child) {
+        return GetMaterialApp(
+          themeMode: _themeController.themeStateFromHiveSettingBox,
+          title: 'My Portfolio',
+          initialBinding: InitialBinding(),
+          debugShowCheckedModeBanner: false,
+          // You can use the library anywhere in the app even in theme
+          theme: CustomTheme.lightTheme,
+          darkTheme: CustomTheme.darkTheme,
+          home: child,
+        );
+      },
+      child: const SplashScreen(),
     );
   }
 }

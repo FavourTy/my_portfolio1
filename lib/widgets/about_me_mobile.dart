@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfollio/global/appAssets.dart';
 import 'package:newton_particles/newton_particles.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -20,31 +21,31 @@ class AboutMeMobile extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 30.0),
       height: screenHeight,
-      constraints: const BoxConstraints(minHeight: 560.0),
+      constraints: BoxConstraints(minHeight: 560.0.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-           Row(
-             children: [
-               GradientText('About the creator',
-                    style:  AppTextStyle.pTextStyle(context),
-                    gradientType: GradientType.linear,
-                    radius: 2.5,
-                    colors: const [
-                     Colors.blue,
-                       Colors.yellow,
-                      Colors.purple,
-                    ],
-                  ),
-                  SizedBox(
-                    width: 55,
-                            height: 85,
-                            child: Image.asset(AppAsset.grinning),
-                            
-                  )
-             ],
-           ),
+          Row(
+            children: [
+              GradientText(
+                'About the creator',
+                style: AppTextStyle.pTextStyle(context),
+                gradientType: GradientType.linear,
+                radius: 2.5,
+                colors: const [
+                  Colors.blue,
+                  Colors.yellow,
+                  Colors.purple,
+                ],
+              ),
+              SizedBox(
+                width: 55.w,
+                height: 85,
+                child: Image.asset(AppAsset.grinning),
+              )
+            ],
+          ),
           Constants.sizedBox(height: 20),
           Text(
             "Hello! I'm Adetayo, a passionate Flutter developer "
@@ -82,78 +83,83 @@ class AboutMeMobile extends StatelessWidget {
             softWrap: true,
             style: AppTextStyle.aboutMeMoTextstyle(context),
           ),
-           Constants.sizedBox(height: 40),
-           SizedBox(
+          Constants.sizedBox(height: 40),
+          SizedBox(
             height: 100,
-             child: Stack(
-                          children:[
-                            Newton(
-                              // Add any kind of effects to your UI
-                              // For example:
-                              activeEffects: [
-                                  RainEffect(
-                                      particleConfiguration: ParticleConfiguration(
-                                          shape: CircleShape(),
-                                          size: const Size(5, 5),
-                                          color: const SingleParticleColor(color: Colors.purple),
-                                      ),
-                                      effectConfiguration: const EffectConfiguration(),
-                                  )
-                              ],
-                          ),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Center(
-                                child: AnimatedTextKit(
-                                       animatedTexts: [
-                                         RotateAnimatedText('Flutter',
-                                         textStyle: AppTextStyle.aaStyle(context),
-                                         ),
-                                         RotateAnimatedText('GitHub',
-                                         textStyle: AppTextStyle.aaStyle(context),
-                                         ),
-                                         RotateAnimatedText('Dart',
-                                       textStyle: AppTextStyle.aaStyle(context),
-                                       ),
-                                       RotateAnimatedText('Firebase',
-                                         textStyle: AppTextStyle.aaStyle(context),
-                                         ),
-                                         
-                                       ],
-                                       onTap: () {
-                                         print("Tap Event");
-                                       },
-                                       repeatForever: true,
-                                     ),
-                              ),
-                               Center(
-                                     child: AnimatedTextKit(animatedTexts: [
-                                      RotateAnimatedText('Material-UI',
-                                         textStyle: AppTextStyle.aaStyle(context),
-                                         ),
-                                          RotateAnimatedText('Git',
-                                         textStyle: AppTextStyle.aaStyle(context),
-                                         ),
-                                         RotateAnimatedText('C++',
-                                           textStyle: AppTextStyle.aaStyle(context),
-                                           ),
-                                            RotateAnimatedText('Google',
-                                         textStyle: AppTextStyle.aaStyle(context),
-                                         ),
-                                     ],
-                                     
-                                      onTap: () {
-                                           print("Tap Event");
-                                         },
-                                         repeatForever: true,),
-                                   )
-                            ],
-                          ),
-                          ] 
+            child: Stack(children: [
+              Newton(
+                // Add any kind of effects to your UI
+                // For example:
+                activeEffects: [
+                  RainEffect(
+                    particleConfiguration: ParticleConfiguration(
+                      shape: CircleShape(),
+                      size: const Size(5, 5),
+                      color: const SingleParticleColor(color: Colors.purple),
+                    ),
+                    effectConfiguration: const EffectConfiguration(),
+                  )
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Center(
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        RotateAnimatedText(
+                          'Flutter',
+                          textStyle: AppTextStyle.aaStyle(context),
                         ),
-           ),
-          
+                        RotateAnimatedText(
+                          'GitHub',
+                          textStyle: AppTextStyle.aaStyle(context),
+                        ),
+                        RotateAnimatedText(
+                          'Dart',
+                          textStyle: AppTextStyle.aaStyle(context),
+                        ),
+                        RotateAnimatedText(
+                          'Firebase',
+                          textStyle: AppTextStyle.aaStyle(context),
+                        ),
+                      ],
+                      onTap: () {
+                        print("Tap Event");
+                      },
+                      repeatForever: true,
+                    ),
+                  ),
+                  Center(
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        RotateAnimatedText(
+                          'Material-UI',
+                          textStyle: AppTextStyle.aaStyle(context),
+                        ),
+                        RotateAnimatedText(
+                          'Git',
+                          textStyle: AppTextStyle.aaStyle(context),
+                        ),
+                        RotateAnimatedText(
+                          'C++',
+                          textStyle: AppTextStyle.aaStyle(context),
+                        ),
+                        RotateAnimatedText(
+                          'Google',
+                          textStyle: AppTextStyle.aaStyle(context),
+                        ),
+                      ],
+                      onTap: () {
+                        print("Tap Event");
+                      },
+                      repeatForever: true,
+                    ),
+                  )
+                ],
+              ),
+            ]),
+          ),
         ],
       ),
     );
