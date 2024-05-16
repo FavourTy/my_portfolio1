@@ -72,6 +72,9 @@ class MainMobile extends StatelessWidget {
                       TyperAnimatedText(
                           "Bringing your ideas to life through code",
                           textStyle: AppTextStyle.blueUnderlinedStyle(context)),
+                          TyperAnimatedText(
+                          "Bringing your ideas to life through code",
+                          textStyle: AppTextStyle.blueUnderlinedStyle(context)),
                     ],
                     pause: const Duration(milliseconds: 1000),
                     displayFullTextOnTap: true,
