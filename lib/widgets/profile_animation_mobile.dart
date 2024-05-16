@@ -39,7 +39,7 @@ class _MobileProfileAnimationState extends State<MobileProfileAnimation>
       child: Image.asset(
         AppAsset.image,
         width: screenWidth,
-        height: 290,
+        height: 290.h,
         fit: BoxFit.contain,
       ),
     );

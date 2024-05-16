@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(1080, 1920),
       // minTextAdapt: true,
-      splitScreenMode: true,
+      // splitScreenMode: true,
       // Use builder only if you need to use library outside ScreenUtilInit context
       builder: (_, child) {
         return GetMaterialApp(
