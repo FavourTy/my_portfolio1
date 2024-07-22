@@ -48,7 +48,6 @@ dependencies:
   tbib_splash_screen: ^1.0.0
   get: ^4.6.6
   hive_flutter: ^1.1.0
-  flutter_screenutil: ^5.9.0
 
 
 dev_dependencies:

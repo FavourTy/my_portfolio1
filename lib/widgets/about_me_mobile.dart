@@ -2,11 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfollio/global/appAssets.dart';
 import 'package:newton_particles/newton_particles.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
-
 import '../global/app_text_style.dart';
 import '../global/constants.dart';
 
@@ -21,7 +19,7 @@ class AboutMeMobile extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 30.0),
       height: screenHeight,
-      constraints: BoxConstraints(minHeight: 560.0.h),
+      constraints: BoxConstraints(minHeight: 560.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -40,7 +38,7 @@ class AboutMeMobile extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                width: 55.w,
+                width: 55,
                 height: 85,
                 child: Image.asset(AppAsset.grinning),
               )

@@ -7,7 +7,6 @@ import '../global/app_text_style.dart';
 import '../global/constants.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:newton_particles/newton_particles.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AboutMeDesktop extends StatelessWidget {
   const AboutMeDesktop({super.key});
@@ -20,12 +19,12 @@ class AboutMeDesktop extends StatelessWidget {
     return Container(
       height: screenHeight,
       width: screenWidth,
-      margin: EdgeInsets.symmetric(horizontal: 20.h),
+      margin: EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Constants.sizedBox(height: 10.h),
+          Constants.sizedBox(height: 10),
           Row(
             children: [
               Row(
@@ -34,7 +33,7 @@ class AboutMeDesktop extends StatelessWidget {
                     'About the creator',
                     style: AppTextStyle.pTextStyle(context),
                     gradientType: GradientType.linear,
-                    radius: 2.5.r,
+                    radius: 2.5,
                     colors: const [
                       Colors.blue,
                       Colors.yellow,
@@ -42,15 +41,15 @@ class AboutMeDesktop extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    width: 55.w,
-                    height: 85.h,
+                    width: 55,
+                    height: 85,
                     child: Image.asset(AppAsset.grinning),
                   )
                 ],
               ),
             ],
           ),
-          Constants.sizedBox(height: 20.h),
+          Constants.sizedBox(height: 20),
           Expanded(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -94,11 +93,11 @@ class AboutMeDesktop extends StatelessWidget {
                         softWrap: true,
                         style: AppTextStyle.aboutMeDeTextstyle(context),
                       ),
-                      Constants.sizedBox(height: 5.h),
+                      Constants.sizedBox(height: 5),
                     ],
                   ),
                 ),
-                Constants.sizedBox(width: 40.w),
+                Constants.sizedBox(width: 40),
                 Expanded(
                   child: SizedBox(
                     child: Stack(children: [
